@@ -17,14 +17,14 @@
     }
     #ww_527aa936a9ba0 {
       width: 100%;
-      max-width: 1200px; /* 可依需求調整最大寬度 */
+   
       height: 100%;
-      max-height: 800px; /* 可依需求調整最大高度 */
+     
     }
     @media (max-width: 768px) {
       #ww_527aa936a9ba0 {
-        max-width: 100%;
-        max-height: 100%;
+       100%;
+       100%;
       }
     }
   </style>
