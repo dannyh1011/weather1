@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
       max-width: 1200px;
       flex: 1;
     }
-    @media (max-width: 1400px) {
+    @media (max-width: 2800px) {
       .widget {
         max-width: 100%;
       }
