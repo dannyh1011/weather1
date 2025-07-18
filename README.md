@@ -1,57 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>多語天氣預報</title>
+  <title>Full Screen Weather Widget</title>
   <style>
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
-      background: #222;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
+      background: #222; /* 背景色 */
     }
-    header {
-      background: #333;
-      padding: 10px;
-      text-align: center;
-    }
-    header button {
-      margin: 0 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      background: #81D4FA;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    header button:hover {
-      background: #4FC3F7;
-    }
-    iframe {
-      flex: 1;
-      border: none;
-      width: 100%;
+    #ww_527aa936a9ba0 {
+      height: 100%;
     }
   </style>
 </head>
 <body>
-  <header>
-    <button onclick="switchLang('ja.html')">日本語</button>
-    <button onclick="switchLang('zh.html')">繁體中文</button>
-    <button onclick="switchLang('en.html')">English</button>
-  </header>
-
-  <iframe id="weatherFrame" src="zh.html"></iframe>
-
-  <script>
-    function switchLang(page) {
-      document.getElementById('weatherFrame').src = page;
-    }
-  </script>
+  <div id="ww_527aa936a9ba0" v='1.3' loc='auto' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+    <a href="https://weatherwidget.org/" id="ww_527aa936a9ba0_u" target="_blank">Widget weather HTML</a>
+  </div>
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_527aa936a9ba0"></script>
 </body>
 </html>
