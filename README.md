@@ -3,57 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather Widgets Multi-language</title>
+  <title>多語天氣預報</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      height: 100%;
       background: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
     }
-    .widget-container {
+    header {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    header button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #81D4FA;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    header button:hover {
+      background: #4FC3F7;
+    }
+    iframe {
+      flex: 1;
+      border: none;
       width: 100%;
-      max-width: 1200px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    @media(min-width: 768px) {
-      .widget-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    iframe, div {
-      width: 100%;
-      height: 400px;
     }
   </style>
 </head>
 <body>
-  <div class="widget-container">
-    <!-- Japanese -->
-    <div id="ww_jp" v='1.3' loc='id' a='{"t":"responsive","lang":"ja","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"3","cl_odd":"#0000000a"}'>
-      <a href="https://weatherwidget.org/" id="ww_jp_u" target="_blank">Widget weather</a>
-    </div>
-    
-    <!-- Traditional Chinese -->
-    <div id="ww_zh" v='1.3' loc='id' a='{"t":"responsive","lang":"zh-Hant","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"3","cl_odd":"#0000000a"}'>
-      <a href="https://weatherwidget.org/" id="ww_zh_u" target="_blank">Html weather widget</a>
-    </div>
-    
-    <!-- English -->
-    <div id="ww_en" v='1.3' loc='id' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"3","cl_odd":"#0000000a"}'>
-      <a href="https://weatherwidget.org/" id="ww_en_u" target="_blank">Html weather widget</a>
-    </div>
-  </div>
+  <header>
+    <button onclick="switchLang('ja.html')">日本語</button>
+    <button onclick="switchLang('zh.html')">繁體中文</button>
+    <button onclick="switchLang('en.html')">English</button>
+  </header>
 
-  <!-- Scripts -->
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_jp"></script>
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_zh"></script>
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_en"></script>
+  <iframe id="weatherFrame" src="zh.html"></iframe>
+
+  <script>
+    function switchLang(page) {
+      document.getElementById('weatherFrame').src = page;
+    }
+  </script>
 </body>
 </html>
