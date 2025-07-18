@@ -21,7 +21,7 @@
       max-width: 1200px;
       flex: 1;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 1400px) {
       .widget {
         max-width: 100%;
       }
