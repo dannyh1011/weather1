@@ -1,9 +1,8 @@
-# solhotel
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>全螢幕照片輪播</title>
   <style>
     html, body {
       margin: 0;
@@ -25,8 +24,8 @@
 </head>
 <body>
 
-  <img class="slide" src="Garden.jpg" alt="照片1">
-  <img class="slide" src="SolHotel_M_02.jpg" alt="照片2">
+  <img class="slide" src="Garden.jpg" alt="">
+  <img class="slide" src="SolHotel_M_02.jpg" alt="">
 
   <script>
     const slides = document.querySelectorAll('.slide');
@@ -48,7 +47,6 @@
 
 </body>
 </html>
-
     showSlides();
   </script>
 
