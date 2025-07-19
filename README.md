@@ -3,48 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>飯店大廳輪播</title>
+  <title>全螢幕照片輪播</title>
   <style>
-    html, body { margin: 0; padding: 0; height: 100%; background: black; }
-    .slideshow-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: black;
-}
-    .slides {
-      display: none;
-      width: 100%;
+    html, body {
+      margin: 0;
+      padding: 0;
       height: 100%;
-      object-fit: cover;
+      width: 100%;
       background: black;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: none;
     }
   </style>
 </head>
 <body>
 
-  <div class="slideshow-container">
-    <img class="slides" src="r健康訂房" alt="圖1">
-    <img class="slides" src="bf.jpg" alt="圖2">
-    <img class="slides" src="SolHotel_M_02.jpg" alt="圖3">
-  </div>
+  <img class="slide" src="健康訂房.jpg" alt="照片1">
+  <img class="slide" src="photo2.jpg" alt="照片2">
 
   <script>
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("slides");
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
 
-    function showSlides() {
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 10000); 
+    function showSlide(index) {
+      slides.forEach(s => s.style.display = 'none');
+      slides[index].style.display = 'block';
     }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    showSlide(current);
+    setInterval(nextSlide, 10000); // 每10秒切換
+  </script>
+
+</body>
+</html>
 
     showSlides();
   </script>
