@@ -26,7 +26,7 @@
 <body>
 
   <img class="slide" src="健康訂房.jpg" alt="照片1">
-  <img class="slide" src="photo2.jpg" alt="照片2">
+  <img class="slide" src="SolHotel_M_02.jpg" alt="照片2">
 
   <script>
     const slides = document.querySelectorAll('.slide');
