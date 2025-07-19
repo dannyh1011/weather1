@@ -25,7 +25,7 @@
 </head>
 <body>
 
-  <img class="slide" src="健康訂房.jpg" alt="照片1">
+  <img class="slide" src="Garden.jpg" alt="照片1">
   <img class="slide" src="SolHotel_M_02.jpg" alt="照片2">
 
   <script>
