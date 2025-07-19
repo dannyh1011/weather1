@@ -11,6 +11,9 @@
       height: 100%;
       background: black;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     iframe {
       border: none;
