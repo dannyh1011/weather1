@@ -21,7 +21,7 @@
       align-items: center;
     }
     .widget-ticker {
-      height: 80px; /* ticker 高度可調整 */
+      height: 150px; /* ticker 高度可調整 */
     }
     .widget-section div {
       width: 100%;
