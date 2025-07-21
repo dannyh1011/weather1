@@ -19,12 +19,30 @@
       object-fit: cover;
       display: none;
     }
-  </style>
+ <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    overflow: hidden;
+  }
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: none;
+  }
+</style>
 </head>
 <body>
 
-  <img class="slide" src="Garden.jpg" alt="">
-  <img class="slide" src="SolHotel_M_02.jpg" alt="">
+  <div class="slide" style="background-image: url('Garden.jpg');"></div>
+  <div class="slide" style="background-image: url('SolHotel_M_02.jpg');"></div>
 
   <script>
     const slides = document.querySelectorAll('.slide');
@@ -41,8 +59,5 @@
     }
 
     showSlide(current);
-    setInterval(nextSlide, 10000); // 每10秒切換
+    setInterval(nextSlide, 10000);
   </script>
-
-</body>
-</html>
