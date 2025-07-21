@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>大廳天氣顯示</title>
+  <title>大廳全螢幕天氣顯示</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      background: black; /* 可改品牌色 */
+      background: black;
       display: flex;
       flex-direction: column;
     }
@@ -20,8 +20,9 @@
       justify-content: center;
       align-items: center;
     }
-    .widget-ticker {
-      height: 150px; /* ticker 高度可調整 */
+    .widget-responsive {
+      flex: 1;
+      background: #455A64;
     }
     .widget-section div {
       width: 100%;
@@ -37,15 +38,15 @@
     </div>
   </div>
 
-  <!-- 下方：ticker 跑馬燈 weather widget -->
-  <div class="widget-section widget-ticker">
-    <div id="ww_4e7bea93b48e1" v='1.3' loc='id' a='{"t":"ticker","lang":"zh-Hant","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
-      <a href="https://weatherwidget.org/" id="ww_4e7bea93b48e1_u" target="_blank">Widget weather</a>
+  <!-- 下方：responsive weather widget -->
+  <div class="widget-section widget-responsive">
+    <div id="ww_c815ce4203541" v='1.3' loc='id' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#455A64","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","cl_odd":"#0000000a"}'>
+      <a href="https://weatherwidget.org/" id="ww_c815ce4203541_u" target="_blank">Widget weather</a>
     </div>
   </div>
 
-  <!-- 兩個 widget script -->
+  <!-- widget scripts -->
   <script async src="https://app3.weatherwidget.org/js/?id=ww_29697f233d44c"></script>
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_4e7bea93b48e1"></script>
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_c815ce4203541"></script>
 </body>
 </html>
