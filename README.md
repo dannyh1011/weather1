@@ -1,63 +1,51 @@
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>大廳天氣顯示</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       width: 100%;
-      background: black;
-      overflow: hidden;
+      height: 100%;
+      background: black; /* 可改品牌色 */
+      display: flex;
+      flex-direction: column;
     }
-    .slide {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      display: none;
+    .widget-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
- <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: black;
-    overflow: hidden;
-  }
-  .slide {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    display: none;
-  }
-</style>
+    .widget-ticker {
+      height: 80px; /* ticker 高度可調整 */
+    }
+    .widget-section div {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
+  <!-- 上方：水平型 weather widget -->
+  <div class="widget-section">
+    <div id="ww_29697f233d44c" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+      <a href="https://weatherwidget.org/" id="ww_29697f233d44c_u" target="_blank">Widget weather</a>
+    </div>
+  </div>
 
-  <div class="slide" style="background-image: url('Garden.jpg');"></div>
-  <div class="slide" style="background-image: url('SolHotel_M_02.jpg');"></div>
+  <!-- 下方：ticker 跑馬燈 weather widget -->
+  <div class="widget-section widget-ticker">
+    <div id="ww_4e7bea93b48e1" v='1.3' loc='id' a='{"t":"ticker","lang":"zh-Hant","sl_lpl":1,"ids":["wl9238"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+      <a href="https://weatherwidget.org/" id="ww_4e7bea93b48e1_u" target="_blank">Widget weather</a>
+    </div>
+  </div>
 
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    let current = 0;
-
-    function showSlide(index) {
-      slides.forEach(s => s.style.display = 'none');
-      slides[index].style.display = 'block';
-    }
-
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
-
-    showSlide(current);
-    setInterval(nextSlide, 10000);
-  </script>
+  <!-- 兩個 widget script -->
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_29697f233d44c"></script>
+  <script async src="https://app3.weatherwidget.org/js/?id=ww_4e7bea93b48e1"></script>
+</body>
+</html>
