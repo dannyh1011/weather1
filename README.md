@@ -23,7 +23,7 @@
     }
 
     .widget-responsive {
-      background: #2e2e2e;
+      background: #f0f0f0;
     }
 
     .widget-section div {
