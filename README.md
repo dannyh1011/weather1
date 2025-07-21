@@ -46,8 +46,3 @@
 
 </body>
 </html>
-    showSlides();
-  </script>
-
-</body>
-</html>
