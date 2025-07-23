@@ -22,7 +22,6 @@
       align-items: center;
       width: 90vw;
       max-width: 1200px;
-      gap: 30px; /* 上下間距 */
     }
 
     .widget {
@@ -30,14 +29,40 @@
       max-width: 100%;
     }
 
-    a {
-      display: none; /* 隱藏 widget 原始連結（可選） */
+    .divider {
+      width: 100%;        /* 與 widget 寬度一致 */
+      height: 2px;        /* 白線粗細一致 */
+      background: #ffffff; /* 白色線條 */
+      margin: 30px 0;     /* 上下間距 */
+    }
+
+    /* 隱藏 weather2 標題與下方白線，如在 HTML 中 */
+    h1, hr {
+      display: none !important;
+    }
+
+    /* 隱藏 widget branding link */
+    a[id$="_u"] {
+      display: none !important;
+    }
+
+    /* 移除 widget 內部底線、邊框、陰影，如有 */
+    .widget * {
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+
+    .widget iframe {
+      border: none !important;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
+    <!-- 上方白線 -->
+    <div class="divider"></div>
+
     <!-- 橫向 weather widget -->
     <div class="widget" id="ww_a728af039000a" v='1.3' loc='id'
       a='{
@@ -58,7 +83,10 @@
       }'>
       <a href="https://weatherwidget.org/" id="ww_a728af039000a_u" target="_blank">Free weather widget</a>
     </div>
-<br>
+
+    <!-- 中間白線 -->
+    <div class="divider"></div>
+
     <!-- 響應式 weather widget -->
     <div class="widget" id="ww_ac90862dca38f" v='1.3' loc='id'
       a='{
