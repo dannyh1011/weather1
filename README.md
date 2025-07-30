@@ -70,7 +70,7 @@
         "font":"Arial",
         "sl_ics":"one",
         "sl_sot":"celsius",
-        "cl_bkg":"#2e2e2e",
+        "cl_bkg":"image",
         "cl_font":"#FFFFFF",
         "cl_cloud":"#FFFFFF",
         "cl_persp":"#81D4FA",
